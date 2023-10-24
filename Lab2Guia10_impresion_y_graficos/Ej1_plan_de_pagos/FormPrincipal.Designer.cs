@@ -53,16 +53,18 @@ namespace Ej1_plan_de_pagos
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCrearPlan
             // 
-            this.btnCrearPlan.Location = new System.Drawing.Point(385, 182);
+            this.btnCrearPlan.Location = new System.Drawing.Point(422, 248);
             this.btnCrearPlan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCrearPlan.Name = "btnCrearPlan";
-            this.btnCrearPlan.Size = new System.Drawing.Size(171, 51);
+            this.btnCrearPlan.Size = new System.Drawing.Size(151, 51);
             this.btnCrearPlan.TabIndex = 9;
             this.btnCrearPlan.Text = "Crear Plan de pagos";
             this.btnCrearPlan.UseVisualStyleBackColor = true;
@@ -71,7 +73,7 @@ namespace Ej1_plan_de_pagos
             // tbApellidosYNombres
             // 
             this.tbApellidosYNombres.Enabled = false;
-            this.tbApellidosYNombres.Location = new System.Drawing.Point(184, 68);
+            this.tbApellidosYNombres.Location = new System.Drawing.Point(184, 74);
             this.tbApellidosYNombres.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbApellidosYNombres.Name = "tbApellidosYNombres";
             this.tbApellidosYNombres.Size = new System.Drawing.Size(224, 26);
@@ -85,17 +87,16 @@ namespace Ej1_plan_de_pagos
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.tbDni);
-            this.groupBox1.Controls.Add(this.btnCrearPlan);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.tbApellidosYNombres);
             this.groupBox1.Location = new System.Drawing.Point(7, 57);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(574, 241);
+            this.groupBox1.Size = new System.Drawing.Size(574, 173);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Datos del Infractor";
+            this.groupBox1.Text = "Vista de los Datos del Infractor";
             // 
             // label3
             // 
@@ -116,10 +117,10 @@ namespace Ej1_plan_de_pagos
             // 
             // btnConsultarPlanes
             // 
-            this.btnConsultarPlanes.Location = new System.Drawing.Point(443, 109);
+            this.btnConsultarPlanes.Location = new System.Drawing.Point(415, 122);
             this.btnConsultarPlanes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnConsultarPlanes.Name = "btnConsultarPlanes";
-            this.btnConsultarPlanes.Size = new System.Drawing.Size(113, 53);
+            this.btnConsultarPlanes.Size = new System.Drawing.Size(151, 35);
             this.btnConsultarPlanes.TabIndex = 25;
             this.btnConsultarPlanes.Text = "Ver Detalle plan";
             this.btnConsultarPlanes.UseVisualStyleBackColor = true;
@@ -127,10 +128,10 @@ namespace Ej1_plan_de_pagos
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(443, 27);
+            this.button1.Location = new System.Drawing.Point(415, 22);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 59);
+            this.button1.Size = new System.Drawing.Size(141, 36);
             this.button1.TabIndex = 24;
             this.button1.Text = "Buscar Infractor";
             this.button1.UseVisualStyleBackColor = true;
@@ -241,7 +242,7 @@ namespace Ej1_plan_de_pagos
             // 
             // statusStrip1
             // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 302);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 308);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(586, 22);
             this.statusStrip1.TabIndex = 24;
@@ -251,14 +252,19 @@ namespace Ej1_plan_de_pagos
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(586, 324);
+            this.ClientSize = new System.Drawing.Size(586, 330);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.btnCrearPlan);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
@@ -302,6 +308,8 @@ namespace Ej1_plan_de_pagos
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbPlanesDelInfractor;
+        private System.Windows.Forms.PrintDialog printDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }
 
