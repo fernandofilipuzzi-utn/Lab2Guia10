@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{2C214913-45A0-4058-8905-39C49E01BC91}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Ej1_plan_de_pagos</RootNamespace>
-    <AssemblyName>Ej1_plan_de_pagos</AssemblyName>
+    <RootNamespace>Ej1_encuestas</RootNamespace>
+    <AssemblyName>Ej1_encuestas</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,48 +46,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormEdicionPlan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormEdicionPlan.Designer.cs">
-      <DependentUpon>FormEdicionPlan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormDatosFeriado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormDatosFeriado.Designer.cs">
-      <DependentUpon>FormDatosFeriado.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormPrincipal.Designer.cs">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormResumen.cs">
+    <Compile Include="FormComentario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormResumen.Designer.cs">
-      <DependentUpon>FormResumen.cs</DependentUpon>
+    <Compile Include="FormComentario.Designer.cs">
+      <DependentUpon>FormComentario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modelo\Cuota.cs" />
-    <Compile Include="Modelo\Infractor.cs" />
-    <Compile Include="Modelo\Municipalidad.cs" />
-    <Compile Include="Modelo\PlanDePago.cs" />
-    <Compile Include="Modelo\Utils\Validator.cs" />
+    <Compile Include="Modelo\Comentario.cs" />
+    <Compile Include="Modelo\Evaluador.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormEdicionPlan.resx">
-      <DependentUpon>FormEdicionPlan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormDatosFeriado.resx">
-      <DependentUpon>FormDatosFeriado.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormResumen.resx">
-      <DependentUpon>FormResumen.cs</DependentUpon>
+    <EmbeddedResource Include="FormComentario.resx">
+      <DependentUpon>FormComentario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -110,19 +89,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="uml\plan_de_pagos.uml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="uml\plan_de_pagos.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CalendarioClassLib\CalendarioClassLib.csproj">
-      <Project>{8ec35db5-26d0-475b-8e0f-62aaaf5eae1f}</Project>
-      <Name>CalendarioClassLib</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

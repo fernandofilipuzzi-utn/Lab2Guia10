@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Ej1_plan_de_pagos.Properties {
+namespace Ej1_encuestas.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

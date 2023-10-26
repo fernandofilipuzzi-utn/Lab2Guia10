@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ej1_plan_de_pagos.Modelo
+namespace Ej2_plan_de_pagos.Modelo
 {
     [Serializable]
     class Municipalidad
