@@ -65,29 +65,44 @@ namespace Ej1_encuestas
 
         private void imprimirListadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
+            linea = 0;
+            if (printPreviewDialog1.ShowDialog()==DialogResult.OK)
             {
                 printDocument1.Print();
-                linea = 0;
             }
         }
 
-        int linea = 10;
+        int linea = 0;
+        int cantXPagina = 30;
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             Graphics g = e.Graphics;
             Font font = new Font("Arial", 12);
             Brush brush = new SolidBrush(Color.Black);
+            Pen pen = new Pen(brush);
          
-            float x=10, y=10;
-            
-            for(int n=linea,m=0 ; linea< comentarios.Count && m<2; n++, linea++,m++)
+            float x=20, y=40;
+
+            g.DrawString($"{"ID",-10}", font, brush, x+ 10, y);
+            g.DrawString($"{"COMENTARIO",-25}", font, brush, x + 50, y);
+            g.DrawString($"{"VALORACIÓN",-10}", font, brush, x + 500, y);
+            y += 20;
+
+            g.DrawLine(pen, x + 10,y, x + 650, y);
+            y += 5;
+
+            for (int n=linea,m=0 ; linea< comentarios.Count && m< cantXPagina; n++, linea++,m++)
             {
                 Comentario c = comentarios[n];
-                g.DrawString(c.Id.ToString(),font, brush, x+10,y);
-                g.DrawString(c.Contenido, font, brush, x + 60, y);
-                g.DrawString(c.Valoracion.ToString(), font, brush, x + 200, y+=23);
+                g.DrawString($"{c.Id.ToString(),-10}", font, brush,x+10,y);
+
+                string contenido = c.Contenido;
+                if (contenido.Length > 25) contenido=contenido.Substring(0, 20);
+                g.DrawString($"{contenido,-25}", font, brush, x + 50, y);
+
+                g.DrawString($"{c.Valoracion.ToString(),10}", font, brush, x + 500, y);
+                y += 20;
             }
 
             if (linea >= comentarios.Count)
