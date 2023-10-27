@@ -45,6 +45,8 @@ namespace Ej1_encuestas
                 comentarios.Add(nuevo);
                 pintar();
             }
+
+            fComentario.Dispose();
         }
 
         
@@ -110,6 +112,24 @@ namespace Ej1_encuestas
             Evaluador evaluador = new Evaluador();
             evaluador.Evaluar(comentarios);
             pintar();
+        }
+
+
+        private void verÍndiceDeValoracionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormVer fVer = new FormVer();
+
+            //hacer consulta para llenar
+            fVer.Lista["0"] = "23";
+            fVer.Lista["1"] = "100";
+            fVer.Lista["2"] = "50";
+            fVer.Lista["3"] = "103";
+            fVer.Lista["4"] = "23";
+            fVer.Lista["5"] = "23";
+
+            fVer.ShowDialog();
+
+            fVer.Dispose();
         }
     }
 }

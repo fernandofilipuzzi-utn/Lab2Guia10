@@ -36,14 +36,17 @@ namespace Ej1_encuestas
             this.imprimirListadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.cerrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.procesarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.valorarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Contenido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Valoracion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.procesarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.valorarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.estadisticaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.printDocument2 = new System.Drawing.Printing.PrintDocument();
+            this.verÍndiceDeValoracionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -52,7 +55,8 @@ namespace Ej1_encuestas
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.configuraciónToolStripMenuItem,
-            this.procesarToolStripMenuItem});
+            this.procesarToolStripMenuItem,
+            this.estadisticaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
@@ -97,6 +101,22 @@ namespace Ej1_encuestas
             this.cerrarToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
             this.cerrarToolStripMenuItem.Text = "Cerrar";
             // 
+            // procesarToolStripMenuItem
+            // 
+            this.procesarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.valorarToolStripMenuItem});
+            this.procesarToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.procesarToolStripMenuItem.Name = "procesarToolStripMenuItem";
+            this.procesarToolStripMenuItem.Size = new System.Drawing.Size(82, 25);
+            this.procesarToolStripMenuItem.Text = "Procesar";
+            // 
+            // valorarToolStripMenuItem
+            // 
+            this.valorarToolStripMenuItem.Name = "valorarToolStripMenuItem";
+            this.valorarToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.valorarToolStripMenuItem.Text = "Valorar listado";
+            this.valorarToolStripMenuItem.Click += new System.EventHandler(this.valorarToolStripMenuItem_Click);
+            // 
             // printDocument1
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
@@ -139,21 +159,21 @@ namespace Ej1_encuestas
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
-            // procesarToolStripMenuItem
+            // estadisticaToolStripMenuItem
             // 
-            this.procesarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.valorarToolStripMenuItem});
-            this.procesarToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.procesarToolStripMenuItem.Name = "procesarToolStripMenuItem";
-            this.procesarToolStripMenuItem.Size = new System.Drawing.Size(82, 25);
-            this.procesarToolStripMenuItem.Text = "Procesar";
+            this.estadisticaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.verÍndiceDeValoracionesToolStripMenuItem});
+            this.estadisticaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.estadisticaToolStripMenuItem.Name = "estadisticaToolStripMenuItem";
+            this.estadisticaToolStripMenuItem.Size = new System.Drawing.Size(94, 25);
+            this.estadisticaToolStripMenuItem.Text = "Estadistica";
             // 
-            // valorarToolStripMenuItem
+            // verÍndiceDeValoracionesToolStripMenuItem
             // 
-            this.valorarToolStripMenuItem.Name = "valorarToolStripMenuItem";
-            this.valorarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.valorarToolStripMenuItem.Text = "Valorar listado";
-            this.valorarToolStripMenuItem.Click += new System.EventHandler(this.valorarToolStripMenuItem_Click);
+            this.verÍndiceDeValoracionesToolStripMenuItem.Name = "verÍndiceDeValoracionesToolStripMenuItem";
+            this.verÍndiceDeValoracionesToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
+            this.verÍndiceDeValoracionesToolStripMenuItem.Text = "Índice de valoraciones";
+            this.verÍndiceDeValoracionesToolStripMenuItem.Click += new System.EventHandler(this.verÍndiceDeValoracionesToolStripMenuItem_Click);
             // 
             // FormPrincipal
             // 
@@ -194,6 +214,9 @@ namespace Ej1_encuestas
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.ToolStripMenuItem procesarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem valorarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem estadisticaToolStripMenuItem;
+        private System.Drawing.Printing.PrintDocument printDocument2;
+        private System.Windows.Forms.ToolStripMenuItem verÍndiceDeValoracionesToolStripMenuItem;
     }
 }
 
