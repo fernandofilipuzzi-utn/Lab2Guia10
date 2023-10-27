@@ -33,16 +33,17 @@ namespace Ej1_encuestas
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.configuraciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarFeriadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.imprimirListadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.cerrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Contenido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Valoracion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.imprimirListadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.procesarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.valorarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -50,11 +51,12 @@ namespace Ej1_encuestas
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.configuraciónToolStripMenuItem});
+            this.configuraciónToolStripMenuItem,
+            this.procesarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(616, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(606, 29);
             this.menuStrip1.TabIndex = 23;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -76,6 +78,13 @@ namespace Ej1_encuestas
             this.agregarFeriadosToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
             this.agregarFeriadosToolStripMenuItem.Text = "Agregar comentario";
             this.agregarFeriadosToolStripMenuItem.Click += new System.EventHandler(this.btnAgregarComentario_Click);
+            // 
+            // imprimirListadoToolStripMenuItem
+            // 
+            this.imprimirListadoToolStripMenuItem.Name = "imprimirListadoToolStripMenuItem";
+            this.imprimirListadoToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
+            this.imprimirListadoToolStripMenuItem.Text = "Imprimir Listado";
+            this.imprimirListadoToolStripMenuItem.Click += new System.EventHandler(this.imprimirListadoToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
@@ -99,20 +108,10 @@ namespace Ej1_encuestas
             this.Id,
             this.Contenido,
             this.Valoracion});
-            this.dataGridView1.Location = new System.Drawing.Point(0, 115);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 42);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(604, 244);
+            this.dataGridView1.Size = new System.Drawing.Size(604, 317);
             this.dataGridView1.TabIndex = 25;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(482, 64);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 28);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Valorar todos";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Id
             // 
@@ -140,19 +139,27 @@ namespace Ej1_encuestas
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
-            // imprimirListadoToolStripMenuItem
+            // procesarToolStripMenuItem
             // 
-            this.imprimirListadoToolStripMenuItem.Name = "imprimirListadoToolStripMenuItem";
-            this.imprimirListadoToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
-            this.imprimirListadoToolStripMenuItem.Text = "Imprimir Listado";
-            this.imprimirListadoToolStripMenuItem.Click += new System.EventHandler(this.imprimirListadoToolStripMenuItem_Click);
+            this.procesarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.valorarToolStripMenuItem});
+            this.procesarToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.procesarToolStripMenuItem.Name = "procesarToolStripMenuItem";
+            this.procesarToolStripMenuItem.Size = new System.Drawing.Size(82, 25);
+            this.procesarToolStripMenuItem.Text = "Procesar";
+            // 
+            // valorarToolStripMenuItem
+            // 
+            this.valorarToolStripMenuItem.Name = "valorarToolStripMenuItem";
+            this.valorarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.valorarToolStripMenuItem.Text = "Valorar listado";
+            this.valorarToolStripMenuItem.Click += new System.EventHandler(this.valorarToolStripMenuItem_Click);
             // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(616, 384);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(606, 384);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -180,12 +187,13 @@ namespace Ej1_encuestas
         private System.Windows.Forms.ToolStripMenuItem cerrarToolStripMenuItem;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Contenido;
         private System.Windows.Forms.DataGridViewTextBoxColumn Valoracion;
         private System.Windows.Forms.ToolStripMenuItem imprimirListadoToolStripMenuItem;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.ToolStripMenuItem procesarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem valorarToolStripMenuItem;
     }
 }
 

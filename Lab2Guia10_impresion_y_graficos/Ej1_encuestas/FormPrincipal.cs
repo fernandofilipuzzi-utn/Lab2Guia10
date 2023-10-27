@@ -47,13 +47,7 @@ namespace Ej1_encuestas
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Evaluador evaluador = new Evaluador();
-            evaluador.Evaluar(comentarios);
-            pintar();
-        }
-
+        
         private void pintar()
         {
             dataGridView1.Rows.Clear();
@@ -109,6 +103,13 @@ namespace Ej1_encuestas
                 e.HasMorePages = false;
             else
                 e.HasMorePages = true;
+        }
+
+        private void valorarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Evaluador evaluador = new Evaluador();
+            evaluador.Evaluar(comentarios);
+            pintar();
         }
     }
 }
