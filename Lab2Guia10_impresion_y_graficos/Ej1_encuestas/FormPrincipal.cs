@@ -77,8 +77,14 @@ namespace Ej1_encuestas
             Font font = new Font("Arial", 12);
             Brush brush = new SolidBrush(Color.Black);
             Pen pen = new Pen(brush);
-         
-            float x=20, y=40;
+
+            float x = 20, y = 40;
+
+            Image image = Image.FromFile("../../recursos/img/logo.jpg");
+            Rectangle rect = new Rectangle((int)x, (int)y, 50, 50);
+            g.DrawImage(image, rect);
+
+            y += 70;
 
             g.DrawString($"{"ID",-10}", font, brush, x+ 10, y);
             g.DrawString($"{"COMENTARIO",-25}", font, brush, x + 50, y);
@@ -120,12 +126,14 @@ namespace Ej1_encuestas
             FormVer fVer = new FormVer();
 
             //hacer consulta para llenar
+            
             fVer.Lista["0"] = "23";
             fVer.Lista["1"] = "100";
             fVer.Lista["2"] = "50";
             fVer.Lista["3"] = "103";
             fVer.Lista["4"] = "23";
             fVer.Lista["5"] = "23";
+            fVer.Lista["6"] = "23";
 
             fVer.ShowDialog();
 
