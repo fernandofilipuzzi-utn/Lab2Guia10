@@ -123,7 +123,7 @@ namespace Ej1_encuestas
 
         private void verÍndiceDeValoracionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormVer fVer = new FormVer();
+            FormVerDiagramaBarras fVer = new FormVerDiagramaBarras();
 
             //hacer consulta para llenar
             
@@ -134,6 +134,22 @@ namespace Ej1_encuestas
             fVer.Lista["4"] = "23";
             fVer.Lista["5"] = "23";
             fVer.Lista["6"] = "23";
+
+            fVer.ShowDialog();
+
+            fVer.Dispose();
+        }
+
+        private void índiceDeValoracionessectoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormVerDiagramaTorta fVer = new FormVerDiagramaTorta();
+
+            //hacer consulta para llenar
+            //falta las etiquetas con los porcentajes!
+
+            //prueba de concepto
+            fVer.Valores = new float[] { 180, 45, 90,45 };
+            fVer.Colores = new Color[] { Color.Red, Color.Blue, Color.Green, Color.White };
 
             fVer.ShowDialog();
 

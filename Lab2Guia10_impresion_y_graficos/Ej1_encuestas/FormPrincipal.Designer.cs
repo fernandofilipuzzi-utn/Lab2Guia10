@@ -38,15 +38,16 @@ namespace Ej1_encuestas
             this.cerrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.procesarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.valorarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.estadisticaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verÍndiceDeValoracionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Contenido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Valoracion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.estadisticaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printDocument2 = new System.Drawing.Printing.PrintDocument();
-            this.verÍndiceDeValoracionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.índiceDeValoracionessectoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -117,6 +118,23 @@ namespace Ej1_encuestas
             this.valorarToolStripMenuItem.Text = "Valorar listado";
             this.valorarToolStripMenuItem.Click += new System.EventHandler(this.valorarToolStripMenuItem_Click);
             // 
+            // estadisticaToolStripMenuItem
+            // 
+            this.estadisticaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.verÍndiceDeValoracionesToolStripMenuItem,
+            this.índiceDeValoracionessectoresToolStripMenuItem});
+            this.estadisticaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.estadisticaToolStripMenuItem.Name = "estadisticaToolStripMenuItem";
+            this.estadisticaToolStripMenuItem.Size = new System.Drawing.Size(94, 25);
+            this.estadisticaToolStripMenuItem.Text = "Estadistica";
+            // 
+            // verÍndiceDeValoracionesToolStripMenuItem
+            // 
+            this.verÍndiceDeValoracionesToolStripMenuItem.Name = "verÍndiceDeValoracionesToolStripMenuItem";
+            this.verÍndiceDeValoracionesToolStripMenuItem.Size = new System.Drawing.Size(304, 26);
+            this.verÍndiceDeValoracionesToolStripMenuItem.Text = "Índice de valoraciones";
+            this.verÍndiceDeValoracionesToolStripMenuItem.Click += new System.EventHandler(this.verÍndiceDeValoracionesToolStripMenuItem_Click);
+            // 
             // printDocument1
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
@@ -159,21 +177,12 @@ namespace Ej1_encuestas
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
-            // estadisticaToolStripMenuItem
+            // índiceDeValoracionessectoresToolStripMenuItem
             // 
-            this.estadisticaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.verÍndiceDeValoracionesToolStripMenuItem});
-            this.estadisticaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.estadisticaToolStripMenuItem.Name = "estadisticaToolStripMenuItem";
-            this.estadisticaToolStripMenuItem.Size = new System.Drawing.Size(94, 25);
-            this.estadisticaToolStripMenuItem.Text = "Estadistica";
-            // 
-            // verÍndiceDeValoracionesToolStripMenuItem
-            // 
-            this.verÍndiceDeValoracionesToolStripMenuItem.Name = "verÍndiceDeValoracionesToolStripMenuItem";
-            this.verÍndiceDeValoracionesToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
-            this.verÍndiceDeValoracionesToolStripMenuItem.Text = "Índice de valoraciones";
-            this.verÍndiceDeValoracionesToolStripMenuItem.Click += new System.EventHandler(this.verÍndiceDeValoracionesToolStripMenuItem_Click);
+            this.índiceDeValoracionessectoresToolStripMenuItem.Name = "índiceDeValoracionessectoresToolStripMenuItem";
+            this.índiceDeValoracionessectoresToolStripMenuItem.Size = new System.Drawing.Size(304, 26);
+            this.índiceDeValoracionessectoresToolStripMenuItem.Text = "Índice de valoraciones (sectores)";
+            this.índiceDeValoracionessectoresToolStripMenuItem.Click += new System.EventHandler(this.índiceDeValoracionessectoresToolStripMenuItem_Click);
             // 
             // FormPrincipal
             // 
@@ -217,6 +226,7 @@ namespace Ej1_encuestas
         private System.Windows.Forms.ToolStripMenuItem estadisticaToolStripMenuItem;
         private System.Drawing.Printing.PrintDocument printDocument2;
         private System.Windows.Forms.ToolStripMenuItem verÍndiceDeValoracionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem índiceDeValoracionessectoresToolStripMenuItem;
     }
 }
 

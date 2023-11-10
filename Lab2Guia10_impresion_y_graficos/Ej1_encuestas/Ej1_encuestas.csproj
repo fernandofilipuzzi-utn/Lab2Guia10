@@ -58,11 +58,17 @@
     <Compile Include="FormComentario.Designer.cs">
       <DependentUpon>FormComentario.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormVer.cs">
+    <Compile Include="FormVerDiagramaBarras.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormVer.Designer.cs">
-      <DependentUpon>FormVer.cs</DependentUpon>
+    <Compile Include="FormVerDiagramaBarras.Designer.cs">
+      <DependentUpon>FormVerDiagramaBarras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVerDiagramaTorta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVerDiagramaTorta.Designer.cs">
+      <DependentUpon>FormVerDiagramaTorta.cs</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Comentario.cs" />
     <Compile Include="Modelo\Evaluador.cs" />
@@ -74,8 +80,11 @@
     <EmbeddedResource Include="FormComentario.resx">
       <DependentUpon>FormComentario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormVer.resx">
-      <DependentUpon>FormVer.cs</DependentUpon>
+    <EmbeddedResource Include="FormVerDiagramaBarras.resx">
+      <DependentUpon>FormVerDiagramaBarras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVerDiagramaTorta.resx">
+      <DependentUpon>FormVerDiagramaTorta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
