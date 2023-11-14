@@ -9,7 +9,7 @@ La imagen debajo muestra tres temas correspondientes al ejercicio 1:
 En el listado queda pendiente de indicar el número de pagina.
 En ambos gráficos queda pendiente de agregar las etiquetas correspondientes.
 
-<div style="width:100%; text-align:center;">
+<div align="center">
   <img src="Lab2Guia10_impresion_y_graficos/Ej1_encuestas/docs/pantallazo.jpg" style="width:400px;"/>
 </div>
 
