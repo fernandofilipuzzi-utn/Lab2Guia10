@@ -40,6 +40,7 @@ namespace Ej1_encuestas
             this.valorarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadisticaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verÍndiceDeValoracionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.índiceDeValoracionessectoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,7 +48,6 @@ namespace Ej1_encuestas
             this.Valoracion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument2 = new System.Drawing.Printing.PrintDocument();
-            this.índiceDeValoracionessectoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -135,6 +135,13 @@ namespace Ej1_encuestas
             this.verÍndiceDeValoracionesToolStripMenuItem.Text = "Índice de valoraciones";
             this.verÍndiceDeValoracionesToolStripMenuItem.Click += new System.EventHandler(this.verÍndiceDeValoracionesToolStripMenuItem_Click);
             // 
+            // índiceDeValoracionessectoresToolStripMenuItem
+            // 
+            this.índiceDeValoracionessectoresToolStripMenuItem.Name = "índiceDeValoracionessectoresToolStripMenuItem";
+            this.índiceDeValoracionessectoresToolStripMenuItem.Size = new System.Drawing.Size(304, 26);
+            this.índiceDeValoracionessectoresToolStripMenuItem.Text = "Índice de valoraciones (sectores)";
+            this.índiceDeValoracionessectoresToolStripMenuItem.Click += new System.EventHandler(this.índiceDeValoracionessectoresToolStripMenuItem_Click);
+            // 
             // printDocument1
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
@@ -177,13 +184,6 @@ namespace Ej1_encuestas
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
-            // índiceDeValoracionessectoresToolStripMenuItem
-            // 
-            this.índiceDeValoracionessectoresToolStripMenuItem.Name = "índiceDeValoracionessectoresToolStripMenuItem";
-            this.índiceDeValoracionessectoresToolStripMenuItem.Size = new System.Drawing.Size(304, 26);
-            this.índiceDeValoracionessectoresToolStripMenuItem.Text = "Índice de valoraciones (sectores)";
-            this.índiceDeValoracionessectoresToolStripMenuItem.Click += new System.EventHandler(this.índiceDeValoracionessectoresToolStripMenuItem_Click);
-            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -198,6 +198,7 @@ namespace Ej1_encuestas
             this.MaximizeBox = false;
             this.Name = "FormPrincipal";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de opinión pública";
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
