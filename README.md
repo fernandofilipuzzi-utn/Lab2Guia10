@@ -13,7 +13,9 @@ En ambos gráficos queda pendiente de agregar las etiquetas correspondientes.
   <img src="Lab2Guia10_impresion_y_graficos/Ej1_encuestas/docs/pantallazo.jpg" style="width:400px;"/>
 </div>
 
-## Impresión del listado ##
+<details>
+<summary> Impresión del listado </summary>
+
 
 ```csharp
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
@@ -58,8 +60,11 @@ En ambos gráficos queda pendiente de agregar las etiquetas correspondientes.
                 e.HasMorePages = true;
         }
 ```
+</details>
 
-## Gráfico de barras (simplificado) ##
+<details> 
+  
+<summary>Gráfico de barras (simplificado)</summary>
 
 ```csharp
        private void pictureBox1_Paint(object sender, PaintEventArgs e)
@@ -99,8 +104,11 @@ En ambos gráficos queda pendiente de agregar las etiquetas correspondientes.
             }
         }
 ```
+</details>
 
-## Gráfico de sectores (simplificado) ##
+<details>
+<summary>Gráfico de sectores (simplificado)</summary>
+  
 ```csharp
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
@@ -133,3 +141,4 @@ En ambos gráficos queda pendiente de agregar las etiquetas correspondientes.
             }
         }
 ```
+</details>
